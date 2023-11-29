@@ -1,0 +1,34 @@
+*{
+    text-align: center;
+}
+.completed .circle{
+    background-color: #00ff00;
+}
+span:hover{
+    cursor: pointer;
+}
+.circle{
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    background-color: #000;
+    border-radius: 50%;
+    margin-right: 5px;
+}
+.completed{
+    text-decoration: line-through;
+}
+.delete-btn {
+    position: relative;
+    background-color: #ff0000; /* Adjust the color as needed */
+    color: #fff; /* Adjust the text color as needed */
+    padding: 5px 10px;
+    border: none;
+    cursor: pointer;
+    border-radius: 70%;
+}
+.edit-btn{
+    cursor: pointer;
+    border-radius: 50%;
+    margin-left: 10px;
+}
