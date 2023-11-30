@@ -14,17 +14,19 @@ app.get("/gettodo",async(req,res)=>{
 app.post("/addtodo",async(req,res)=>{
     let {task}=req.body;
     let msg=await todo.addtodo(task);
+    res.json({message:"task added"});
     res.redirect("/");
 })
-app.delete("/deletetodo",async (req,res)=>{
+app.post("/deletetodo",async (req,res)=>{
     const taskToDelete = req.body.task;
         await todo.deletetodo(taskToDelete);
         res.json({ message: "Task deleted successfully" });
 })
 app.put("/edittodo",async(req,res)=>{
     const{oldTask,newTask}=req.body;
-    await todo.edittodo(oldTask,newTask);
-    res.json({message:"Task edited"});
+    console.log(oldTask)
+   let mssg= await todo.edittodo(oldTask,newTask);
+    res.json({message: mssg});
 })
 app.listen(3333,()=>{
     console.log("server started!...");

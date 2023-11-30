@@ -1,1 +1,1 @@
-["yo sup"]
+["yo sup","somo","study backend "]
