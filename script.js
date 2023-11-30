@@ -1,7 +1,7 @@
 const express=require("express");
 const app=express();
 let path=require("path");
-app.use(express.urlencoded({extended:true}));
+app.use(express.urlencoded({extended:true}));//middleware
 app.use(express.json());
 
 let todo=require("./todos/JS/script");
@@ -20,14 +20,6 @@ app.delete("/deletetodo",async (req,res)=>{
     const taskToDelete = req.body.task;
         await todo.deletetodo(taskToDelete);
         res.json({ message: "Task deleted successfully" });
-    // try {
-    //     const taskToDelete = req.body.task;
-    //     await todo.deletetodo(taskToDelete);
-    //     res.json({ message: "Task deleted successfully" });
-    // } catch (error) {
-    //     console.error("Error deleting todo:", error);
-    //     res.status(500).json({ error: "Internal Server Error" });
-    // }
 })
 app.put("/edittodo",async(req,res)=>{
     const{oldTask,newTask}=req.body;

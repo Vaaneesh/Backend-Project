@@ -79,7 +79,6 @@ function editTask(task,div){
             newTask:newTaskname
         });
 
-        // taskElement.textContent=newTaskname;
         const updatedDiv = div.cloneNode(true); //remove existing event listeners
         updatedDiv.innerHTML=`<span class="task-item"><span class="circle"></span>${newTaskname}</span><button class="edit-btn"><i class="fa-solid fa-user-pen"></i></button><button class="delete-btn">X</button>`;
         div.replaceWith(updatedDiv);

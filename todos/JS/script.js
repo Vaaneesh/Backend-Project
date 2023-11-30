@@ -81,27 +81,6 @@ class todo{
                 reject(error);
             }
         })
-        // return new Promise((resolve,reject)=>{
-        //     fs.readFile(filePath,
-        //         {
-        //             encoding:"utf-8",
-        //         },
-        //         (err,data)=>{
-        //             if(err)return reject(err.message);
-        //             if(data.length>0){
-        //                 data=JSON.parse(data);
-        //                 data=data.filter((task)=>task!==tasktodelete);
-        //                 fs.writeFile(
-        //                     filePath,
-        //                     JSON.stringify(data),
-        //                     (err)=>{
-        //                         if(err)return reject(err.message);
-        //                         resolve("Task deleted successfully")
-        //                     }
-        //                 )
-        //             }
-        //         })
-        // })
     }
 }
 module.exports=todo;
