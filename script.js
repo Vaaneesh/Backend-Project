@@ -22,7 +22,7 @@ app.post("/deletetodo",async (req,res)=>{
         await todo.deletetodo(taskToDelete);
         res.json({ message: "Task deleted successfully" });
 })
-app.put("/edittodo",async(req,res)=>{
+app.post("/edittodo",async(req,res)=>{
     const{oldTask,newTask}=req.body;
     console.log(oldTask)
    let mssg= await todo.edittodo(oldTask,newTask);
